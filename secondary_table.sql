@@ -13,7 +13,7 @@ JOIN economies e
     on c.country = e.country 
     and c.independence_date <= e.year
 	and continent = 'Europe'
-	AND e.YEAR BETWEEN 2000 AND 2021
+	AND e.YEAR BETWEEN 2006 AND 2018
 GROUP BY c.country,
 	c.continent,
 	e.year,
@@ -25,3 +25,4 @@ GROUP BY c.country,
 
 SELECT*
 FROM t_misa_peslova_project_SQL_secondary_final 
+;
