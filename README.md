@@ -2,14 +2,17 @@
 my sql project preview
 
 Popis projektu
-	Projekt je finální práce Datové akademie od Engeta. Cílem tohoto projektu je odpovědět na definované otázky k problematice životní úrovně obyvatel v daném období. Výsledky vycházejí z datových sad obsahujících informace o mzdách, cenách a různých číselníků a kalkulací v rámci ČR, ale i ostatních zemí světa.  
+
+Projekt je finální práce Datové akademie od Engeta. Cílem tohoto projektu je odpovědět na definované otázky k problematice životní úrovně obyvatel v daném období. Výsledky vycházejí z datových sad obsahujících informace o mzdách, cenách a různých číselníků a kalkulací v rámci ČR, ale i ostatních zemí světa.  
 
 Tvorba primární tabulky (t_misa_peslova_project_SQL_primary_final)
-	Jelikož podkladů a dat bylo velké množství, bylo nejprve nutné vytvořit primární tabulku, do které jsem vybrala nejdůležitější relevantní údaje, které k zodpovězení otázek potřebujeme. Primární tabulku jsem vytvořila spojením tabulky „Czechia price“ a „Czechia payroll“, které jsem ihned použitím podmínek (filtrace relevantních kategorií) redukovala. Následně jsem připojila tabulky „Czechia price category“, „Czechia payroll industry branch“ a „Czechia payroll value type“. Poslední zmíněnou tabulku jsem opět redukovala výběrem relevantních kategorií. Odstranila jsem prázdné hodnoty a vypsala jsem pouze sloupce „payroll_year“, „payroll_quarter“, „avg_wages“, „industry_branch_code“, „food_category_code“ a „avg_price“. 
-	Takto upravená data jsou dostačující pro první čtyři otázky. 
+
+Jelikož podkladů a dat bylo velké množství, bylo nejprve nutné vytvořit primární tabulku, do které jsem vybrala nejdůležitější relevantní údaje, které k zodpovězení otázek potřebujeme. Primární tabulku jsem vytvořila spojením tabulky „Czechia price“ a „Czechia payroll“, které jsem ihned použitím podmínek (filtrace relevantních kategorií) redukovala. Následně jsem připojila tabulky „Czechia price category“, „Czechia payroll industry branch“ a „Czechia payroll value type“. Poslední zmíněnou tabulku jsem opět redukovala výběrem relevantních kategorií. Odstranila jsem prázdné hodnoty a vypsala jsem pouze sloupce „payroll_year“, „payroll_quarter“, „avg_wages“, „industry_branch_code“, „food_category_code“ a „avg_price“. 
+Takto upravená data jsou dostačující pro první čtyři otázky. 
 
 Tvorba sekundární tabulky (t_misa_peslova_project_SQL_secondary_final)
-	Pro zodpovězení poslední otázky pouze primární tabulka nestačí, proto bylo nutné vytvořit tabulku sekundární, obsahující světová ekonomická a demografická data. To jsem provedla spojením tabulky „Countries“ a „Economies“, kde jsem si zároveň vyfiltrovala pouze evropské státy a období srovnatelné s obdobím z otázek 1-4. Vypsala jsem opět pouze relevantní údaje „country“, „continent“, „year“, „GDP“, „gini“ a „taxes“.
+
+Pro zodpovězení poslední otázky pouze primární tabulka nestačí, proto bylo nutné vytvořit tabulku sekundární, obsahující světová ekonomická a demografická data. To jsem provedla spojením tabulky „Countries“ a „Economies“, kde jsem si zároveň vyfiltrovala pouze evropské státy a období srovnatelné s obdobím z otázek 1-4. Vypsala jsem opět pouze relevantní údaje „country“, „continent“, „year“, „GDP“, „gini“ a „taxes“.
 Z takto vytvořených tabulek jsem vycházela pro zodpovězení následujících otázek. 
 
 1. Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
