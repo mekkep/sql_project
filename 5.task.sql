@@ -1,3 +1,4 @@
+ 
 SELECT
 	Year,
 	GDP_growth,
@@ -26,4 +27,3 @@ FROM (
 	ON gdp.Year = pw.payroll_year
 ORDER BY Year 
 ;
-

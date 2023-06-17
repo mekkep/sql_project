@@ -13,7 +13,10 @@ FROM (
 	JOIN t_misa_peslova_project_sql_primary_final AS m2
 		ON m1.payroll_year = m2.payroll_year +1
 		AND m1.food_category_code = m2.food_category_code
-	GROUP BY m1.food_category_code 
+	GROUP BY 
+		m1.food_category_code,
+		m1.payroll_year, 
+		m2.payroll_year
 	) g
 HAVING growth >0 AND growth <1
 ORDER BY growth	

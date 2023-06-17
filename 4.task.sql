@@ -13,12 +13,3 @@ FROM (
 	GROUP BY v1.payroll_year
 		) diff
 ;
-
-	
-	
-	
-
-
-
-
-

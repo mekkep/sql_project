@@ -1,3 +1,4 @@
+
 /* task 2*/
 /*the first period*/ -- 1st.q.2006
 SELECT MIN(date_from)
@@ -15,7 +16,7 @@ SELECT
 	food_category_code,
 	ROUND(avg_price,2) AS price,
 	ROUND(AVG(avg_wages),2) AS avg_wages_all_branches,
-	FLOOR(avg_wages/avg(avg_price)) AS amount_in_units
+	FLOOR(AVG(avg_wages)/AVG(avg_price)) AS amount_in_units
 FROM t_misa_peslova_project_sql_primary_final AS v1
 WHERE food_category_code IN (111301, 114201)
 	AND payroll_year IN (2006,2018)
